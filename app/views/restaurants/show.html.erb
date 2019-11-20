@@ -1,0 +1,16 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <div class="info">
+    <div><em><%= @restaurant.category.capitalize %></em></div>
+    <div class="d-flex">
+      <%= @restaurant.address %>
+      <%= @restaurant.phone_number %>
+    </div>
+  </div>
+  <div><%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %></div>
+  <div class="container">
+    <% @restaurant.reviews.each do |thing| %>
+      <p> <%= thing.content %> Rating: <%= thing.rating %></p>
+    <% end %>
+  </div>
+</div>

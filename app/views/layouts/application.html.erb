@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <nav class="navbar bg-light sticky">
+      <%= link_to 'Restaurants Home', restaurants_path, class: 'nav-item nav-link' %>
+      <h3>Yelp</h3>
+      <%= link_to 'Create New', new_restaurant_path, class: 'nav-item nav-link' %>
+    </nav>
     <%= yield %>
   </body>
 </html>
